@@ -7,9 +7,9 @@ require("dotenv").config();
 const app = express();
 app.use(cors());
 app.use(express.json());
-const mongoUri = process.env.MONGODB_URI;
+const mongoUri = process.env.MMONGODB_URI;
 try {
-  mongoose.connect(mongoUri);
+  mongoose.connect("mongodb+srv://victorsantana25:a1b2c3d4e5@cluster0.se3wvql.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
   console.log("Conectado a MongoDB");
 } catch (error) {
   console.error("Error de conexión", error);
