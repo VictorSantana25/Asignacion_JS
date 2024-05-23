@@ -63,7 +63,7 @@ app.get("/libros/:id", async (req, res) => {
 // Eliminar un libro específico por ID
  app.delete("/libros/:id", async (req, res) => {
     try {
-      const libro = await Libro.findByIdAndRemove(req.params.id);
+      const libro = await Libro.findByIdAndDelete(req.params.id);
       if (libro) {
         res.status(204).send();
       } else {
